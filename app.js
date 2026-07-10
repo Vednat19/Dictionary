@@ -8,6 +8,10 @@ btn.addEventListener("click" , async () =>{
         document.querySelector("#para").innerText = "Please enter a word.";
         return;
     }
+    if (input.includes(" ")) {
+    document.querySelector("#para").innerText = "Please enter only one word.";
+    return;
+}
     let result = await get(input);
      if (result) {
         show(result);
@@ -27,7 +31,7 @@ function show(result){
 
 async function get(word){
     try {
-        let data = await axios.get(url+word);
+        let data = await axios.get(url+ word);
         return data.data;
     } catch (e) {
         console.log(e);
