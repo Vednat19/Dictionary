@@ -1,0 +1,135 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Background */
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    padding:20px;
+}
+
+/* Heading */
+h1{
+    color:#ffffff;
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:35px;
+    letter-spacing:1px;
+    text-shadow:0 6px 18px rgba(0,0,0,.4);
+}
+
+/* Search Input */
+input{
+    width:500px;
+    max-width:90vw;
+    padding:16px 20px;
+    border:none;
+    outline:none;
+    border-radius:14px;
+    font-size:17px;
+    background:#1e293b;
+    color:#f8fafc;
+    border:2px solid transparent;
+    transition:.3s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+input:focus{
+    border-color:#10b981;
+    box-shadow:0 0 0 4px rgba(16,185,129,.2);
+}
+
+/* Search Button */
+#btn{
+    width:500px;
+    max-width:90vw;
+    margin-top:18px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#10b981,#059669);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+    box-shadow:0 10px 25px rgba(16,185,129,.35);
+}
+
+#btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 35px rgba(16,185,129,.45);
+}
+
+#btn:active{
+    transform:scale(.98);
+}
+
+/* Result Box */
+#para{
+    width:500px;
+    max-width:90vw;
+    min-height:220px;
+    margin-top:30px;
+    padding:22px;
+    border-radius:16px;
+    background:rgba(30,41,59,.92);
+    color:#e2e8f0;
+    font-size:16px;
+    line-height:1.8;
+    white-space:pre-line;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    overflow-y:auto;
+}
+
+/* Scrollbar */
+#para::-webkit-scrollbar{
+    width:8px;
+}
+
+#para::-webkit-scrollbar-track{
+    background:#1e293b;
+    border-radius:20px;
+}
+
+#para::-webkit-scrollbar-thumb{
+    background:#10b981;
+    border-radius:20px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+
+    h1{
+        font-size:2.2rem;
+        margin-bottom:25px;
+    }
+
+    input,
+    #btn,
+    #para{
+        width:95%;
+    }
+
+    #para{
+        min-height:180px;
+        font-size:15px;
+    }
+}
